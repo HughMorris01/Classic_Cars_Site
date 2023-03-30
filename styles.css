@@ -1,0 +1,232 @@
+/* Common Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    font-family: 'Special Elite', cursive;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ccc;
+    padding-right: 3rem;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* End of Common Styles */
+
+/* Meunu */
+.menu {
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 1rem;
+    left: 3rem;
+    z-index: 10;
+    cursor: pointer;
+    transition: left .5s;
+}
+
+.change.menu {
+    left: 15vw;
+}
+
+.menu-line {
+    position: absolute;
+    width: 100%;
+    height: .2rem;
+    background-color: white;
+    box-shadow: .1rem .1rem .3rem #222;
+    transition: all .5s linear;
+}
+
+.menu-line-1 {
+    top: 40%;
+}
+
+.menu-line-2 {
+    top: 60%;
+}
+
+.change .menu-line-1 {
+    top: 50%;
+    transform: translateY(-50%);
+    rotate: 45deg;
+}
+
+.change .menu-line-2 {
+    top: 50%;
+    transform: translateY(-50%);
+    rotate: -45deg;
+}
+/* End of Menu */
+
+/* Navbar */
+nav {
+    width: 15vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -15vw;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 0 4rem;
+    z-index: 10;
+    transition: left .5s;
+}
+
+.navbar.change {
+    left: 0;
+}
+
+.navbar-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    color: #777;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    transition: color .3s;
+}
+
+.navbar-link:hover {
+    color: #111
+}
+/* End of Navbar */
+
+/* Common Section Styles */
+.wrapper {
+    width: 100;
+    perspective: 50rem;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #efefef;
+    position: relative;
+    left:0;
+    margin-bottom: 3rem;
+    transform-origin: left;
+    box-shadow: .5rem .5rem 1rem #aaa;
+    transition: left .5s, transform .5s;
+}
+
+section.change {
+    left: 15vw;
+    transform: rotateY(10deg);
+}
+
+.section-heading {
+    font-size: 10rem;
+    font-weight: bolder;
+    max-width: 70%;
+    color: white;
+    margin-bottom: 10rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+    text-shadow: .3rem .3rem .5rem #555;
+}
+/* End of Common Section Styles */
+
+/* Section 1 */
+.section-1 {
+   flex-direction: column;
+   background: url(images/bg-section1.jpg) center no-repeat;
+   background-image: cover;
+}
+
+.section-1 .section-1-heading {
+    margin-bottom: 3rem;
+    
+    text-shadow: 1rem 1rem 1rem #000, 2rem 2rem 2rem #111, 3rem 3rem 3rem #222;
+}
+
+.section-1 img {
+    width: 70%;
+}
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card {
+    width: 40rem;
+    margin: 0 3rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: .6rem .6rem .6rem #bbb;
+    transition: box-shadow .3s;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 1rem 1rem 1rem #bbb;
+}
+
+.car-name {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+}
+
+.card-img {
+    width: 100%;
+    opacity: .6;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img {
+    opacity: 1;
+}
+
+.car-price {
+    font-size: 1.8rem;
+    color: #777;
+    margin: .5rem 0;
+}
+
+.card-btn {
+    width: 100%;
+    background-color: #fff;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    margin-top: 1rem;
+    padding: .5rem;
+    color: #333;
+    text-shadow: .1rem .1rem .3rem #333;
+    box-shadow: .1rem .1rem .5rem #bbb;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    color: #efefef;
+    background-color: #777;
+    text-shadow: .1rem .1rem .2rem #333;
+}
+/* End of Section 2 */
